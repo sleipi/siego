@@ -59,7 +59,7 @@ func request(args Args) {
 				} else {
 					color.Set(color.FgRed)
 				}
-				fmt.Printf("\t%s %d - took %f\n", msg.resp.Proto, msg.resp.StatusCode, msg.took)
+				fmt.Printf("\t%s %d - took %f; %d\n", msg.resp.Proto, msg.resp.StatusCode, msg.took, len(sem))
 				color.Unset()
 			}
 			delete(log, stamp.Unix())
